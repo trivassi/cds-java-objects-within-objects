@@ -1,0 +1,13 @@
+<h1>CD List!</h1>
+
+#if ($cds)
+  <ul>
+    #foreach ($cd in $cds)
+      <li>Genre: $cd.getGenre() - Album: $cd.getAlbum()</li>
+    #end
+  </ul>
+#else
+  <p>No CDs!</p>
+#end
+
+<a href="/cds/new">Add New CD</a>
